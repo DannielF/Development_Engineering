@@ -1,0 +1,16 @@
+/* call for selector of html */
+p {
+    color: blue;
+    font-size: 40px;
+}
+
+/* selectors for class */
+.paragraph {
+    color: red;
+}
+
+/* selectors for ID */
+#text {
+    color: green;
+    font-size: 24px;
+}
