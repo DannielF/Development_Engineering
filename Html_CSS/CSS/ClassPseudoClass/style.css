@@ -1,0 +1,35 @@
+/* Always start with these lines */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    margin-top: 15px;
+    list-style: none;
+    padding-left: 0;
+    background-color: cornflowerblue;
+}
+.main-nav__item {
+    display: inline-block;
+}
+.main-nav__item a {
+    color: yellow;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Pseudo class */
+.main-nav__item a:hover {
+    color: crimson;
+}
+.main-nav__item a:active {
+    color: lawngreen;
+}
+/* Pseudo element */
+.main-nav__item a::after { 
+    content: ' | ';
+}
