@@ -1,0 +1,27 @@
+h1 {
+    font-family: serif;
+    color: #b40950;
+    margin-bottom: 20px;
+}
+.title {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav {
+    margin-top: 20px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.nav li {
+    display: inline-block;
+}
+.nav a {
+    color: #ffffff;
+    background-color: #0baaaa;
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.nav .blog {
+    background-color: #60c306;
+}
