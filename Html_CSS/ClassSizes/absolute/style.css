@@ -1,0 +1,9 @@
+main {
+    background-color: rgb(2, 126, 109);
+    width: 100%;
+    height: 500px;
+}
+p {
+    color: rgb(145, 3, 3);
+    font-size: 30px;
+}

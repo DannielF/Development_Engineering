@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
 }
+html {
+    font-size: 62.5%;
+}
+/* until here */
 
 .main-nav {
     margin-top: 15px;
