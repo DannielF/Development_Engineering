@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+header {
+    background-color: yellow;
+    border: 0.3rem black double;
+    padding: 1rem;
+    width: 100vw;
+    height: 10rem;
+}
+.logo {
+    background-color: green;
+    font-size: 2rem;
+    display: inline-block;
+    margin: 3rem auto;
+}
+.nav-header {
+    background-color: white;
+    display: inline-block;
+}
+.nav-header li {
+    display: inline-block;
+    padding: 0.3rem 0.3rem;
+    font-size: 2rem;
+    list-style: none;
+    text-align: center;
+}
+.nav-aside {
+    display: block;
+    background-color: brown;
+    position: relative;
+    width: 30vw;
+}
+.main-text {
+    display: inline-block;
+    background-color: coral;
+    position: relative;
+    width: 70vw;
+}
+footer p {
+    background-color: blue;
+    font-size: 2rem;
+}
+.nav-footer {
+    background-color: blue;
+    display: inline-block;
+    width: 100vw;
+}
+.nav-footer li {
+    list-style: none;
+    display: inline;
+    font-size: 1.5rem;
+}
