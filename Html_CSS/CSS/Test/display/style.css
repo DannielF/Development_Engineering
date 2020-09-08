@@ -6,21 +6,23 @@
 html {
     font-size: 62.5%;
 }
+body {
+    display: grid;
+    grid-template-areas: 'header header'
+                        'aside main'
+                        'footer footer';
+}
 header {
     background-color: yellow;
-    border: 0.3rem black double;
     padding: 1rem;
     width: 100vw;
-    height: 10rem;
+    height: 15vh;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
 }
 .logo {
-    background-color: green;
     font-size: 2rem;
-    display: inline-block;
-    margin: 3rem auto;
-}
-.nav-header {
-    background-color: white;
     display: inline-block;
 }
 .nav-header li {
@@ -28,31 +30,44 @@ header {
     padding: 0.3rem 0.3rem;
     font-size: 2rem;
     list-style: none;
-    text-align: center;
 }
 .nav-aside {
-    display: block;
+    display: grid;
     background-color: brown;
-    position: relative;
-    width: 30vw;
+    width: 20vw;
+    height: 70vh;
+    grid-area: aside;
+    display: flexbox;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.nav-aside li {
+    margin: 3rem;
+    font-size: 2rem;
+    list-style: none;
+    background-color: blue;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.4rem;
 }
 .main-text {
-    display: inline-block;
+    grid-area: main;
     background-color: coral;
-    position: relative;
-    width: 70vw;
+    width: 80vw;
+    height: 70vh;
+    padding: 3rem;
 }
-footer p {
-    background-color: blue;
-    font-size: 2rem;
-}
-.nav-footer {
-    background-color: blue;
-    display: inline-block;
+.footer {
+    background-color: green;
+    border: 0.3 rem black double;
+    height: 3rem;
+    grid-area: footer;
     width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
 }
-.nav-footer li {
-    list-style: none;
-    display: inline;
-    font-size: 1.5rem;
+.footer section {
+    padding: 1rem;
+    font-size: 2rem;
 }
