@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Sansita Swashed', cursive;
+  margin: 0;
+}
+.hero {
+  background: #23475b;
+  color: white;
+  padding: 3.2rem 1.5rem;
+}
+.title {
+  font-size: 3.6rem;
+  font-weight: normal;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.form {
+  text-align: center;
+  background: rgba(255, 255, 255, .9);
+  padding: 2.4rem;
+  border-radius: 1rem;
+}
+.form input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: .1rem solid #dbdbe2;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+.form p {
+  font-size: 2rem;
+  color: #3a3b3f;
+  margin-bottom: 1.6rem;
+}
+.form button {
+  background: #98ca3f;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  border: none;
+  border-bottom: .5rem solid #6d932b;
+  font-size: 1.6rem;
+  display: inline-block;
+}
