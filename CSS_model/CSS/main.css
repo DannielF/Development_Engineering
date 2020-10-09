@@ -41,3 +41,31 @@ header .header-icons-container .icons {
   justify-self: end;
   margin-right: 5rem;
 }
+header .icons span::before {
+  /* iconos como fuentes */
+  color: white;
+  font-size: 3rem;
+}
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 9rem;
+  font-size: 1.6rem;
+}
+nav .nav-logo-container {
+  margin-left: 5rem;
+}
+nav .nav-logo-container img {
+  width: 22rem;
+  margin-top: 1rem;
+}
+nav .profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5rem;
+}
+nav .profile-link a {
+  color: black;
+  border-bottom: 1px solid black;
+}
