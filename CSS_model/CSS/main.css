@@ -201,3 +201,109 @@ footer p {
   color: white;
   margin-top: 3rem;
 }
+
+/* Styles blog.html */
+
+.blogpost-img-container {
+  padding: 0 5rem 4rem;
+}
+.blogpost-img-container img {
+  width: 100%;
+}
+.blogpost-main-container {
+  padding: 0 5rem 4rem;
+}
+.blogpost-main-container h3 {
+  border-bottom: 1px solid #cdd2da;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.blogpost-main-container article h1 {
+  font-size: 3.5rem;
+}
+.blogpost-main-container article p {
+  font-size: 1.8rem;
+}
+.contact-main-container {
+  width: 100%;
+  min-height: 25rem;
+  background-color: #e6e9ed;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.contact-main-container div {
+  display: inline-block;
+  width: 49.5%;
+  height: 100%;
+}
+.contact-main-container div a {
+  border-bottom: 1px solid black;
+  padding-bottom: .5rem;
+}
+.contact-main-container .contact-left, .contact-right {
+  margin-top: 8.5rem;
+}
+.contact-main-container img {
+  width: 10rem;
+}
+
+/* My way */
+/* .contact-main-container {
+  background-color: #e6e9ed;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  height: 30rem;
+}
+.contact-main-container img {
+  width: 15%;
+}
+.contact-main-container a {
+  border-bottom: 1px solid #1e1d1d;
+}
+.contact-main-container:hover a {
+  text-shadow: 0 1px 1px rgb(36, 33, 33);
+}
+.contact-main-container .contact-left, .contact-right {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: center;
+}
+.contact-right div, .contact-left div {
+  padding: 0 1rem;
+  width: 50%;
+} */
+
+/* styles profile.html */
+.profile-main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #e6e9ed;
+  justify-items: center;
+  align-items: center;
+  height: 30rem;
+}
+.profile-info p {
+  text-align: initial;
+  font-size: 1.4rem;
+}
+.profile-main-container img {
+  width: 80%;
+}
+.profile-project-container h2 {
+  text-align: center;
+  border-bottom: 1px solid #cdd2da;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+.profile-text div {
+  display: inline-block;
+  padding-left: 1rem;
+  margin-bottom: 5rem;
+  max-width: 30%;
+}
+.profile-text div p {
+  font-size: 1.6rem;
+}
