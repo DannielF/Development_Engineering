@@ -240,3 +240,82 @@ main {
   line-height: 1.5rem;
   color: var(--black);
 }
+.main-product-detail {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: var(--warm-black);
+}
+.product-detail--batabit-logo {
+  position: absolute;
+  width: 42px;
+  height: 25px;
+  top: -12px;
+  left: calc(50% - 20px);
+  background: url('./Assets/Img/logo.svg') center/cover no-repeat;
+}
+.product-detail--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 50px 8px auto;
+  text-align: center;
+}
+.product-detail--title h2 {
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--white);
+}
+.product-detail--title p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+.product-detail--card {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: var(--black);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+.product-detail--card .icon-card {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.product-detail--card .clock {
+  background: url('./Assets/Icons/clock.svg') center/cover no-repeat;
+}
+.product-detail--card .dollar-sign {
+  background: url('./Assets/Icons/dollar-sign.svg') center/cover no-repeat;
+}
+.product-detail--card .eye {
+  background: url('./Assets/Icons/eye.svg') center/cover no-repeat;
+}
+.product-detail--card .check-circle {
+  background: url('./Assets/Icons/check-circle.svg') center/cover no-repeat;
+}
+.product--card-title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--white);
+}
+.product--card-body {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
