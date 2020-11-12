@@ -260,7 +260,8 @@ main {
   width: 90%;
   min-width: 288px;
   height: auto;
-  margin: 50px 8px auto;
+  margin: 0 auto;
+  margin-top: 50px;
   text-align: center;
 }
 .product-detail--title h2 {
@@ -322,7 +323,7 @@ main {
 .bitcoin-img-container {
   width: 100%;
   min-width: 320px;
-  height: 65vh;
+  height: 60vh;
   background: url('./Assets/Img/bitcoinbaby2.jpg') center/cover no-repeat;
 }
 .bitcoin-img-container h2 {
@@ -332,4 +333,31 @@ main {
   line-height: 2.6rem;
   color: var(--white);
   text-align: center;
+}
+.main-plans-container {
+  width: 100%;
+  min-width: 320px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.plans--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.plans--title h2 {
+  padding-top: 50px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--black);
+}
+.plans--title p {
+  padding-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #757575;
 }
