@@ -132,12 +132,21 @@ main {
   line-height: 1.6rem;
   color: rgba(117, 117, 117, 1);
 }
+.main-tables-container {
+  display: flex;
+  height: 360px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  margin: 0 12px;
+}
 .main-currency-table, .main-commission-table {
   width: 70%;
   min-width: 235px;
   max-width: 500px;
   height: 360px;
   margin: 0 auto;
+  scroll-snap-align: center;
   font-family: 'Inter', sans-serif;
 }
 .main-currency-table .currency-table--title {
@@ -171,7 +180,7 @@ main {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.9rem;
-  color: var(--grey);
+  color: #808080;
   background-color: var(--white);
 }
 .currency-table--container .table__top-left, .commission-table--container .table__top-left {
@@ -323,11 +332,11 @@ main {
 .bitcoin-img-container {
   width: 100%;
   min-width: 320px;
-  height: 60vh;
-  background: url('./Assets/Img/bitcoinbaby2.jpg') center/cover no-repeat;
+  height: 387px;
+  background: url('./Assets/Img/bitcoinbaby.svg') center/cover no-repeat;
 }
 .bitcoin-img-container h2 {
-  padding-top: 60px;
+  padding-top: 45px;
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 2.6rem;
@@ -348,7 +357,6 @@ main {
   margin-bottom: 40px;
 }
 .plans--title h2 {
-  padding-top: 50px;
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 2.6rem;
