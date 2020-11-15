@@ -350,6 +350,7 @@ main {
   text-align: center;
 }
 .plans--title {
+  padding-top: 40px;
   width: 90%;
   min-width: 288px;
   height: auto;
