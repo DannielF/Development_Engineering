@@ -1,0 +1,28 @@
+.main-tables-container {
+  display: flex;
+  width: 930px;
+  margin: 0 auto;
+  height: 380px;
+}
+.product-cards--container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 930px;
+  margin: 0 auto;
+}
+.bitcoin-img-container {
+  background: url('/Assets/Img/bitcoinbaby2.jpg') center/cover no-repeat;
+  height: 300px;
+}
+.bitcoin-img-container h2 {
+  padding-top: 30px;
+  font-size: 3.4rem;
+}
+.plans-container--slider {
+  justify-content: center;
+  height: 327px;
+}
+footer .right img {
+  width: 90px;
+  height: 75px;
+}
