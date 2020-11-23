@@ -8,14 +8,14 @@ html {
 }
 /*header-gradient-logo*/
 
-.header--logo {
+.header__logo {
   padding-top: 15px;
   padding-left: 10px;
   width: 100%;
   height: 15vh;
   background: linear-gradient(90deg, #0a4c30e6, #2fc125cc);
 }
-.header--logo img {
+.header__logo img {
   width: 150px;
   height: 60px;
 }
