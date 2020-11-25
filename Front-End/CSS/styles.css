@@ -157,3 +157,15 @@ a:hover {
 .carousel-item__details:hover {
   opacity: 1;
 }
+.carousel-item__details div {
+  margin-top: 170px;
+}
+.carousel-item__details > div > img {
+  width: 30px;
+}
+.carousel-item__details--title {
+  color: var(--color-font);
+}
+.carousel-item__details--subtitle {
+  color: var(--color-font);
+}
