@@ -2,7 +2,7 @@
   --background-color: linear-gradient(#21c08b, #ab88ff);
   --color-font: #fff;
   --font-size-header: 1.3rem;
-  --font-size-login-container: 1.2rem;
+  --font-size-register-container: 1.4rem;
 }
 * {
   box-sizing: border-box;
@@ -24,7 +24,7 @@ header {
   height: 60px;
   width: 150px;
 }
-.login {
+.register {
   align-items: center;
   background: var(--background-color);
   display: flex;
@@ -33,7 +33,7 @@ header {
   padding: 0px 30px;
   min-height: calc(100vh - 200px);
 }
-.login__container {
+.register__container {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid white;
   border-radius: 40px;
@@ -42,59 +42,19 @@ header {
   min-height: 600px;
   width: 350px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
 }
-.login__container--form {
+.register__container--form {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-}
-.login__container--form label {
-  font-size: var(--font-size-login-container);
-}
-.login__container--remember {
-  align-items: baseline;
-  color: var(--color-font);
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-.login__container--remember a {
-  color: var(--color-font);
-  font-size: var(--font-size-login-container);
-  text-decoration: none;
-}
-.login__container--remember a:hover {
-  text-decoration: underline;
-}
-.login__container--social-media > div {
-  align-items: center;
-  display: flex;
-  font-size: var(--font-size-login-container);
-  margin-bottom: 10px;
-}
-.login__container--social-media > div > img {
-  width: 30px;
-  margin-right: 10px;
-}
-.login__container--register {
-  font-size: var(--font-size-login-container);
-}
-.login__container--register a {
-  color: var(--color-font);
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-.login__container--register a:hover {
-  text-decoration: underline;
 }
 .input {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid white;
-  font-size: var(--font-size-login-container);
+  font-size: var(--font-size-register-container);
   outline: none;
   padding: 10px 15px;
   height: 50px;
@@ -103,7 +63,7 @@ header {
   color: var(--color-font);
 }
 .button {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
   border: none;
   border-radius: 25px;
   color: var(--color-font);
@@ -113,6 +73,16 @@ header {
   height: 50px;
   letter-spacing: 1px;
   margin: 15px 0px;
+}
+.register__container--login {
+  color: var(--color-font);
+  font-size: var(--font-size-register-container);
+  text-align: center;
+  text-decoration: none;
+}
+.register__container--login:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .footer {
   align-items: center;
@@ -132,7 +102,7 @@ header {
   text-decoration: underline;
 }
 @media only screen and (max-width:600px) {
-  .login__container {
+  .register__container {
     background-color: transparent;
     border: none;
     padding: 0px;
