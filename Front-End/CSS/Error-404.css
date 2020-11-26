@@ -1,0 +1,53 @@
+:root {
+  --background-color: rgba(0, 0, 0, 1);
+  --color-font: #fff;
+  --font-size-header: 1.3rem;
+  --font-size-login-container: 1.2rem;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+header {
+  background: var(--background-color);
+  display: flex;
+  height: 15vh;
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 100%;
+}
+.header__img {
+  height: 60px;
+  width: 150px;
+}
+.error {
+  background: var(--background-color);
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+}
+.error__img {
+  min-width: 320px;
+  min-height: 448px;
+}
+.footer {
+  align-items: center;
+  background: var(--background-color);
+  display: flex;
+  height: 15vh;
+  width: 100%;
+}
+.footer a {
+  color: var(--color-font);
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding-left: 30px;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}

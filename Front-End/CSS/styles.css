@@ -3,7 +3,6 @@
   --color-font: #fff;
   --font-size-header: 1.3rem;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -96,7 +95,7 @@ a:hover {
 }
 .carousel {
   overflow-x: scroll;
-  padding: 30px;
+  padding: 0px 30px 0px 30px;
   position: relative;
   width: 100%;
 }
@@ -108,7 +107,8 @@ a:hover {
 .carousel__container--list {
   color: var(--color-font);
   font-size: 2rem;
-  padding-bottom: 10px;
+  padding-left: 20px;
+  position: absolute;
 }
 .carousel-item {
   /* background-color: #00ff00; */
