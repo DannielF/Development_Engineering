@@ -15,21 +15,20 @@ header,
   display: flex;
 }
 .login__container,
+.login__container--register,
 .login__container--register a,
 .login__container--remember,
 .login__container--remember a,
+.login__container--form label,
+.login__container--social-media > div,
+.input,
 .input::placeholder,
 .button,
 .footer a {
   color: var(--color-font);
+  font-size: var(--font-size-login-container)
 }
-.login__container--form label,
-.login__container--remember a,
-.login__container--social-media > div,
-.login__container--register,
-.input {
-  font-size: var(--font-size-login-container);
-}
+
 
 * {
   box-sizing: border-box;
