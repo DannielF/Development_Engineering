@@ -29,8 +29,8 @@ console.log(epicPhrase2);
 // Let, Const, multilinea, Spread operator
 // old version
 let lorem =
-  'qua consecua. comoddua. Ipsua val dua y yat mimna \n' +
-  'otra frase epica que mostrar.';
+  'qua consecua. comoddua. Ipsua val dua y yat mimna \n'
+  + 'otra frase epica que mostrar.';
 // es6 version
 let lorem2 = `otra frase que necesitamos
   ahora es otra frase epica`;
@@ -51,7 +51,6 @@ let { name, age, country } = person;
 console.log(name, age, country);
 
 // propagacion
-// old version
 let team1 = ['daniel', 'fernando', 'ricardo'];
 let team2 = ['camila', 'oscar', 'felipe'];
 // inside education bring this elements and unite them into a single element
