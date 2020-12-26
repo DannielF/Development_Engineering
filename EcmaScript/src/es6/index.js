@@ -53,9 +53,45 @@ console.log(name, age, country);
 // propagacion
 let team1 = ['daniel', 'fernando', 'ricardo'];
 let team2 = ['camila', 'oscar', 'felipe'];
-// inside education bring this elements and unite them into a single element
+// inside education bring these elements and unite them into a single element
 let education = ['david', ...team1, ...team2];
 console.log(education);
 
-// let --> has block scope only accessible at its block
+// let --> has block scope only accessible at its block code
 // const --> it can't be modified its value
+
+// construir objetos con es6
+let name = 'daniel';
+let age = 28;
+// es5
+obj = { name: name, age: age };
+// es6 version
+obj2 = { name, age };
+console.log(obj2);
+
+// arrow functions
+// sentencia mas reducida y un this no vinculable
+
+// un arreglo con varios objetos
+const names = [
+  { name: 'daniel', age: 28 },
+  { name: 'camila', age: 30 }
+];
+
+// functions anonimas
+let listOfNames = names.map(function (item) {
+  console.log(item.name);
+})
+// es6 functions anonimas
+let listOfNames2 = names.map(item => console.log(item.name));
+
+//another versions es6
+const listOfNames3 = (name, age, country) => {
+  ...
+}
+
+const listOfNames4 = name => {
+  ...
+}
+
+const square = num => num * num;
