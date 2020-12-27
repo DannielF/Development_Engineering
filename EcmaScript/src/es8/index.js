@@ -35,9 +35,43 @@ const string = 'hello';
 console.log(string.padStart(8, 'hi '));
 console.log(string.padEnd(12, '-----')); // se añade al final
 
-// llamado trailing commas
+// trailing commas
 // dejar la coma al final para evitar errores
 
 const obj = {
   name: 'daniel',
 };
+
+// Async Await
+// 1. crear una funcion 2. luego una promesa e invocarla
+
+const helloWorld = () => {
+  return new Promise((resolve, reject) => {
+    (false) // para poder mostrar un error
+      ? setTimeout(() => resolve('hello world'), 3000)
+      : reject(new Error('Test Error'))
+  })
+};
+
+const helloAsync = async () => {
+  const hello = await helloWorld();
+  console.log(hello);
+}
+
+helloAsync();
+
+// async forma correcta
+// try -> vamos a probar sobre lo que va a ejecutar y en 
+// dado caso que esto tenga un error u otro valor que no
+// coincida con la logica que estamos haciendo, va a caer
+// en el try catch y vamos a poder capturar este error.
+const anotherFunction = async () => {
+  try {
+    const hello = await helloWorld();
+    console.log(hello);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+anotherFunction();
