@@ -10,8 +10,8 @@ const somethingWillHappen = () => {
 };
 
 somethingWillHappen()
-  .then(Response => console.log(Response))
-  .catch(err => console.error(err));
+  .then((Response) => console.log(Response))
+  .catch((err) => console.error(err));
 
 // promise with error
 // it's important to used new error
@@ -21,24 +21,24 @@ const somethingWillHappen2 = () => {
     if (true) {
       setTimeout(() => {
         resolve('True');
-      }, 2000)
+      }, 2000);
     } else {
       const error = new Error('Oops');
       reject(error);
     }
   });
-}
+};
 
 somethingWillHappen2()
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
+  .then((response) => console.log(response))
+  .catch((err) => console.error(err));
 
 // run all promises
 
 Promise.all([somethingWillHappen(), somethingWillHappen2()])
-  .then(response => {
+  .then((response) => {
     console.log('Array of results', response);
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
   });
