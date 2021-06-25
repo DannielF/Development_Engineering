@@ -1,9 +1,7 @@
-class main{
-  public static void main(string[] args) {
-    Car car = new Car();
-    car.license = "HGB243";
-    car.driver = "Juanito Escarcha";
+class Main{
+  public static void main(String[] args) {
+    Car car = new Car("HGB243", new Account("Juanito Escarcha", "1236789"));
     car.passenger = 4;
-    System.out.println("Car license: " + car.license);
+    car.printDataCar();
   }
 }
