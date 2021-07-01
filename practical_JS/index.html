@@ -8,6 +8,69 @@
     <script src="./figures.js" type="text/javascript"></script>
   </head>
   <body>
-    <h1>Geometric Figures</h1>
+    <header>
+      <h1>Geometric Figures</h1>
+      <p>Workshop # 1</p>
+    </header>
+    <section>
+      <h2>Let's to calculate area and perimeter of the square</h2>
+      <form action="">
+        <label for="inputFigure">
+          How much each side of the square measures</label
+        >
+        <input type="number" name="" id="inputSquare" placeholder="5" />
+        <button type="button" onclick="calculatePerimeterSquare()">
+          Calculate perimeter square
+        </button>
+        <button type="button" onclick="calculateAreaSquare()">
+          Calculate area square
+        </button>
+      </form>
+      <h2>Let's to calculate area and perimeter of the triangle</h2>
+      <form action="">
+        <label for="inputTriangle">Introduce each side of the triangle</label>
+        <input
+          type="number"
+          name=""
+          id="inputTriangle"
+          placeholder="  side1 "
+        />
+        <input
+          type="number"
+          name=""
+          id="inputTriangle2"
+          placeholder=" side2 "
+        />
+        <input
+          type="number"
+          name=""
+          id="inputTriangle3"
+          placeholder="  base "
+        />
+        <button type="button" onclick="calculatePerimeterTriangle()">
+          Calculate perimeter triangle
+        </button>
+        <button type="button" onclick="calculateAreaTriangle()">
+          Calculate area triangle
+        </button>
+        <button type="button" Onclick="calculateHeightTriangle()">
+          Calculate height triangle
+        </button>
+      </form>
+      <h2>Let's to calculate area and perimeter of the circle</h2>
+      <form action="">
+        <label for="inputCircle">Introduce the radius of the circle</label>
+        <input type="number" name="" id="inputCircle" placeholder=" Radius " />
+        <button type="button" Onclick="calculateDiameterCircle()">
+          Calculate diameter circle
+        </button>
+        <button type="button" Onclick="calculatePerimeterCircle()">
+          Calculate perimeter circle
+        </button>
+        <button type="button" Onclick="calculateAreaCircle()">
+          Calculate area circle
+        </button>
+      </form>
+    </section>
   </body>
 </html>
