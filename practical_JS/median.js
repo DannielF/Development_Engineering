@@ -10,7 +10,7 @@ function calcHalfArithmeticList(listA) {
   return averageList
 }
 
-const isPar = (number) => {
+const isEven = (number) => {
   if (number % 2 === 0) {
     return true;
   } else {
@@ -30,11 +30,11 @@ function calcMedian() {
 
   const midNumbers = parseInt(arrayNumbers.length / 2);
 
-  isPar(midNumbers);
+  isEven(midNumbers);
 
   let median;
 
-  if (isPar(numbers.length)) {
+  if (isEven(numbers.length)) {
     const elementA = arrayNumbers[midNumbers - 1];
     const elementB = arrayNumbers[midNumbers];
     const averageEleAB = calcHalfArithmeticList([
