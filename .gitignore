@@ -1,3 +1,5 @@
+# Standard ignore files and folders
+
 *.png
 *.txt
 *.ttf
@@ -19,3 +21,25 @@
 *Responsive_Design/
 *mediaqueriesSAAS/
 *javascript/
+
+# Webpack
+
+/node_modules
+/test/js
+/test/browsertest/js
+/test/fixtures/temp-*
+/test/temp
+/test/ChangesAndRemovals
+/benchmark/js
+/benchmark/fixtures
+/examples/**/dist
+/coverage
+/.nyc_output
+/.jest-cache
+.DS_Store
+.log
+.idea
+.vscode
+.cache
+.eslintcache
+package-lock.json
