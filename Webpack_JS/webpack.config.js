@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js', // string | object | array
@@ -31,6 +33,14 @@ module.exports = {
           loader: 'babel-loader'
           // the loader which should be applied, it'll be resolved relative to the context
         }
+      },
+      {
+        // preprocessor like stylus or others
+        test: /\.css|.styl$/i,
+        use: [MiniCssExtractPlugin.loader,
+          'css-loader',
+          'stylus-loader'
+        ],
       }
       // these are matching conditions, each accepting a regular expression or string
       // test and include have the same behavior, both must be matched
@@ -42,5 +52,14 @@ module.exports = {
       // Each condition can also receive an object with "and", "or" or "not" properties
       // which are an array of conditions.
     ]
-  }
+  },
+  plugins: [
+    // option is used to customize the webpack build process in a variety of ways. 
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './public/index.html',
+      filename: './index.html',
+    }),
+    new MiniCssExtractPlugin(),
+  ]
 }
