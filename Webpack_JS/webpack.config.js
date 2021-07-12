@@ -2,6 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const { utils } = require('stylus');
 
 module.exports = {
   entry: './src/index.js', // string | object | array
@@ -13,15 +16,21 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // string (default)
     // the target directory for all output files
     // must be an absolute path (use the Node.js path module)
-    filename: 'main.js', // string (default)
+    filename: '[name].[contenthash].js', // string (default)
     // the filename template for entry chunks
     assetModuleFilename: 'assets/images/[hash][ext][query]',
   },
   resolve: {
     // options for resolving module requests
     // (does not apply to resolving of loaders)
-    extensions: ['.js']
+    extensions: ['.js'],
     // extensions that are used
+    alias: {
+      '@utils': path.resolve(__dirname, 'src/utils/'),
+      '@templates': path.resolve(__dirname, 'src/templates/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+      '@images': path.resolve(__dirname, 'src/assets/images/'),
+    }
   },
   module: {
     // configuration regarding modules
@@ -59,11 +68,11 @@ module.exports = {
             // Sets the MIME type for the file to be transformed. {Boolean|String}
 
             // this is for file-loader
-            name: "[name].[ext]",
+            name: "[name].[contenthash].[ext]",
             // Specifies a custom filename template for the target file(s) using the query parameter name.
             outputPath: "./assets/fonts/",
             // Specify a filesystem path where the target file(s) will be placed.
-            publicPath: "./assets/fonts/",
+            publicPath: "../assets/fonts/",
             // Specifies a custom public path for the target file(s).
             esModule: false,
             // Use ES modules syntax. {Boolean}
@@ -88,7 +97,10 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'assets/[name].[contenthash].css'
+      // if there are changes the hash will change
+    }),
     new CopyPlugin({
       patterns: [
         {
@@ -97,5 +109,12 @@ module.exports = {
         }
       ]
     })
-  ]
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new TerserPlugin(),
+    ]
+  }
 }
