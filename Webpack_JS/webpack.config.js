@@ -13,8 +13,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // string (default)
     // the target directory for all output files
     // must be an absolute path (use the Node.js path module)
-    filename: 'main.js' // string (default)
+    filename: 'main.js', // string (default)
     // the filename template for entry chunks
+    assetModuleFilename: 'assets/images/[hash][ext][query]',
   },
   resolve: {
     // options for resolving module requests
@@ -46,6 +47,28 @@ module.exports = {
       {
         test: /\.png/,
         type: 'asset/resource'
+      },
+      {
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            // Specifying the maximum size of a file in bytes. {Boolean|Number|String}
+            mimeType: "application/font-woff",
+            // Sets the MIME type for the file to be transformed. {Boolean|String}
+
+            // this is for file-loader
+            name: "[name].[ext]",
+            // Specifies a custom filename template for the target file(s) using the query parameter name.
+            outputPath: "./assets/fonts/",
+            // Specify a filesystem path where the target file(s) will be placed.
+            publicPath: "./assets/fonts/",
+            // Specifies a custom public path for the target file(s).
+            esModule: false,
+            // Use ES modules syntax. {Boolean}
+          }
+        }
       }
       // these are matching conditions, each accepting a regular expression or string
       // test and include have the same behavior, both must be matched
