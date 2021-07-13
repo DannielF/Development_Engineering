@@ -29,10 +29,10 @@ module.exports = {
     // extensions that are used
     alias: {
       // Create aliases to import or require certain modules more easily.
-      '@utils': path.resolve(__dirname, 'src/utils/'),
-      '@templates': path.resolve(__dirname, 'src/templates/'),
-      '@styles': path.resolve(__dirname, 'src/styles/'),
-      '@images': path.resolve(__dirname, 'src/assets/images/'),
+      Utils: path.resolve(__dirname, 'src/utils/'),
+      Templates: path.resolve(__dirname, 'src/templates/'),
+      Styles: path.resolve(__dirname, 'src/styles/'),
+      Images: path.resolve(__dirname, 'src/assets/images/'),
     }
   },
   module: {
@@ -50,7 +50,7 @@ module.exports = {
       },
       {
         // preprocessor like stylus or others
-        test: /\.css|.styl$/i,
+        test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
