@@ -2,8 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
@@ -19,9 +17,10 @@ module.exports = {
     filename: '[name].[contenthash].js', // string (default)
     // the filename template for entry chunks
     assetModuleFilename: 'assets/images/[hash][ext][query]',
-    clean: true,
   },
-  mode: 'production',
+  mode: 'development',
+  watch: true,
+  // watch active listening for any changes
   resolve: {
     // options for resolving module requests
     // (does not apply to resolving of loaders)
@@ -51,7 +50,9 @@ module.exports = {
       {
         // preprocessor like stylus or others
         test: /\.css|.styl$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader,
+          'css-loader'
+        ],
       },
       {
         test: /\.png/,
@@ -111,11 +112,4 @@ module.exports = {
     }),
     new Dotenv(),
   ],
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin(),
-    ]
-  }
 }

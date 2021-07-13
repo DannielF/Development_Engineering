@@ -21,6 +21,7 @@
 *Responsive_Design/
 *mediaqueriesSAAS/
 *javascript/
+*.vscode
 
 # Webpack
 
@@ -39,7 +40,6 @@
 .DS_Store
 .log
 .idea
-.vscode
 .cache
 .eslintcache
 package-lock.json
