@@ -22,24 +22,4 @@
 *mediaqueriesSAAS/
 *javascript/
 *.vscode
-
-# Webpack
-
-/node_modules
-/test/js
-/test/browsertest/js
-/test/fixtures/temp-*
-/test/temp
-/test/ChangesAndRemovals
-/benchmark/js
-/benchmark/fixtures
-/examples/**/dist
-/coverage
-/.nyc_output
-/.jest-cache
-.DS_Store
-.log
-.idea
-.cache
-.eslintcache
-package-lock.json
+*package-lock.json
