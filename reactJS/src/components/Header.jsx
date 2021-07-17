@@ -1,8 +1,9 @@
 // Stateless component
 import React from 'react';
+import '../assets/styles/components/Header.scss';
 
 const Header = () => (
-  <header>
+  <header className='header'>
     <div className='header__logo'>
       <img
         className='header__img'
@@ -16,8 +17,16 @@ const Header = () => (
         <p>Perfil</p>
       </div>
       <ul>
-        <li><a className='header__menu--links' href='/login.html'>Cuenta</a></li>
-        <li><a className='header__menu--links' href='/'>Cerrar sesión</a></li>
+        <li>
+          <a className='header__menu--links' href='/login.html'>
+            Cuenta
+          </a>
+        </li>
+        <li>
+          <a className='header__menu--links' href='/'>
+            Cerrar sesión
+          </a>
+        </li>
       </ul>
     </div>
   </header>
