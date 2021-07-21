@@ -8,25 +8,27 @@ import Footer from '../components/Footer';
 import useInitialState from '../hooks/useInitialState';
 import '../assets/styles/App.scss';
 
-const API = 'API';
+const API = 'http://localhost:3000/initialState';
 
-const App = () => {
-  return (
+const Home = () => {
+  const initialState = useInitialState(API);
+
+  return initialState.length === 0 ? <h1>Loading...</h1> : (
     <div className='App'>
       <Header />
       <Search />
 
-      {useInitialState.mylist.length > 0 && (
+      {initialState.mylist.length > 0 && (
         <Categories title='Your list'>
           <Carousel>
-            {useInitialState.mylist.map((item) => <CarouselItem key={item.id} {...item} />)}
+            {initialState.mylist.map((item) => <CarouselItem key={item.id} {...item} />)}
           </Carousel>
         </Categories>
       )}
 
       <Categories title='Trends'>
         <Carousel>
-          {useInitialState.trends.map((item) => <CarouselItem key={item.id} {...item} />)}
+          {initialState.trends.map((item) => <CarouselItem key={item.id} {...item} />)}
         </Carousel>
       </Categories>
 
@@ -35,4 +37,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

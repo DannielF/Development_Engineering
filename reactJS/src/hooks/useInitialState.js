@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useInitialState = (API) => {
   const [videos, setVideos] =
-    useState({ myList: [], trends: [], originals: [] });
+    useState([]);
 
   useEffect(() => {
     fetch(API)
@@ -14,3 +14,5 @@ const useInitialState = (API) => {
 };
 
 export default useInitialState;
+
+/*{ myList: [], trends: [], originals: [] }*/
