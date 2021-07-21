@@ -1,19 +1,21 @@
 // Stateless component
 import React from 'react';
 import '../assets/styles/components/Header.scss';
+import logoPlatzi from '../assets/static/logo-platzi-video-BW2.png';
+import userIcon from '../assets/static/user-icon.png';
 
 const Header = () => (
   <header className='header'>
     <div className='header__logo'>
       <img
         className='header__img'
-        src='./PlatziVideo/logo-platzi-video-BW2.png'
+        src={logoPlatzi}
         alt='Logo'
       />
     </div>
     <div className='header__menu'>
       <div className='header__menu--profile'>
-        <img src='./PlatziVideo/user-icon.png' alt='User icon' />
+        <img src={userIcon} alt='User icon' />
         <p>Perfil</p>
       </div>
       <ul>

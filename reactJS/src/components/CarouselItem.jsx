@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/styles/components/Carousel.scss';
+import playIcon from '../assets/static/play-icon.png';
+import plusIcon from '../assets/static/plus-icon.png';
 
 const CarouselItem = ({ cover, title, year, contentRating, duration }) => (
   <div className='carousel-item'>
@@ -11,8 +13,8 @@ const CarouselItem = ({ cover, title, year, contentRating, duration }) => (
     />
     <div className='carousel-item__details'>
       <div>
-        <img src='./PlatziVideo/icons8-play-64.png' alt='Play icon' />
-        <img src='./PlatziVideo/icons8-plus-64.png' alt='Plus icon' />
+        <img src={playIcon} alt='Play icon' />
+        <img src={plusIcon} alt='Plus icon' />
       </div>
       <p className='carousel-item__details--title'>{title}</p>
       <p className='carousel-item__details--subtitle'>{` ${year} ${contentRating} ${duration} `}</p>
