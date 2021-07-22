@@ -1,5 +1,6 @@
 // Stateless component
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/components/Header.scss';
 import logoPlatzi from '../assets/static/logo-platzi-video-BW2.png';
 import userIcon from '../assets/static/user-icon.png';
@@ -7,11 +8,13 @@ import userIcon from '../assets/static/user-icon.png';
 const Header = () => (
   <header className='header'>
     <div className='header__logo'>
-      <img
-        className='header__img'
-        src={logoPlatzi}
-        alt='Logo'
-      />
+      <Link to='/'>
+        <img
+          className='header__img'
+          src={logoPlatzi}
+          alt='Logo'
+        />
+      </Link>
     </div>
     <div className='header__menu'>
       <div className='header__menu--profile'>
@@ -25,9 +28,9 @@ const Header = () => (
           </a>
         </li>
         <li>
-          <a className='header__menu--links' href='/'>
-            Cerrar sesión
-          </a>
+          <Link to='/login' className='header__menu--links'>
+            Iniciar sesión
+          </Link>
         </li>
       </ul>
     </div>
