@@ -1,11 +1,13 @@
 /* eslint-disable arrow-parens */
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { loginRequest } from '../actions';
 import '../assets/styles/components/Login.scss';
 import googleIcon from '../assets/static/google-icon.png';
 import twitterIcon from '../assets/static/twitter-icon.png';
 
-const Login = () => {
+const Login = props => {
   const [form, setValues] = useState({
     email: '',
   });
@@ -17,7 +19,8 @@ const Login = () => {
   };
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(form);
+    props.loginRequest(form);
+    props.history.push('/');
   };
   return (
     <section className='login'>
@@ -40,7 +43,7 @@ const Login = () => {
             placeholder='Password'
             onChange={handleInput}
           />
-          <button type='button' className='button'>Log In</button>
+          <button type='submit' className='button'>Log In</button>
           <div className='login__container--remember'>
             <label htmlFor='cbox1'>
               <input type='checkbox' name='' id='cbox1' value='checkbox' />
@@ -73,4 +76,8 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapDispatchToProps = {
+  loginRequest,
+};
+
+export default connect(null, mapDispatchToProps)(Login);
