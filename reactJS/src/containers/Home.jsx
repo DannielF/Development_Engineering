@@ -38,7 +38,7 @@ const Home = ({ myList, trends, originals }) => {
   );
 };
 
-const mapStateToPros = (state) => {
+const mapStateToPros = state => {
   return {
     myList: state.myList,
     trends: state.trends,

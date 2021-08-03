@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
+    publicPath: '/',
     clean: true,
   },
   resolve: {
@@ -40,7 +41,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|gif|jpe?g)$/,
+        test: /\.(png|gif|jpg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -52,11 +53,6 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
   devServer: {
     historyApiFallback: true,
   },
@@ -67,7 +63,6 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
-      chunkFilename: '[id].css',
     }),
   ],
 };
