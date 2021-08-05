@@ -28,7 +28,7 @@ const Register = props => {
   const handleSubmit = event => {
     event.preventDefault();
     // Execute the action, register the user in the store
-    props.registerRequest(from);
+    props.registerRequest(form);
     props.history.push('/');
   };
 

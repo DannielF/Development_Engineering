@@ -1,16 +1,17 @@
 {
   "name": "reactJS",
   "version": "1.0.0",
-  "description": "Project with react JS",
+  "description": "Project with react, webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack serve --open --mode development"
+    "start": "webpack serve --open --mode development",
+    "lint": "eslint src/ --fix"
   },
   "keywords": [
     "react",
-    "jsx"
+    "webpack"
   ],
   "author": "Daniel Granados",
   "license": "MIT",
