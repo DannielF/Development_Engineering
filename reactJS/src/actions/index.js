@@ -5,11 +5,6 @@ export const setFavorite = payload => ({
   payload,
 });
 
-export const deleteFavorite = payload => ({
-  type: 'DELETE_FAVORITE',
-  payload,
-});
-
 export const loginRequest = payload => ({
   type: 'LOGIN_REQUEST',
   payload,
@@ -25,7 +20,14 @@ export const registerRequest = payload => ({
   payload,
 });
 
+export const deleteFavorite = payload => ({
+  type: 'DELETE_FAVORITE',
+  payload,
+});
+
 export const getVideoSource = payload => ({
   type: 'GET_VIDEO_SOURCE',
   payload,
 });
+
+export { setFavorite as default };

@@ -1,11 +1,12 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable arrow-parens */
 import React, { useLayoutEffect } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import { Redirect } from 'react-router-dom';
 import { getVideoSource } from '../actions';
 import NotFound from './NotFound';
 import '../assets/styles/components/Player.scss';
+// import { Redirect } from 'react-router-dom';
 
 const Player = props => {
   // this part is giving for Router when the route is generate (player/:id), then match with the parameters
@@ -15,7 +16,7 @@ const Player = props => {
   useLayoutEffect(() => {
     props.getVideoSource(id);
   }, []);
-  return hasPlaying ? (
+  return !hasPlaying ? <NotFound /> : (
     <div className='Player'>
       <video controls autoPlay>
         <source src={props.playing.source} type='video/mp4' />
@@ -24,7 +25,7 @@ const Player = props => {
         <button type='button' onClick={() => props.history.goBack()}>Get Back</button>
       </div>
     </div>
-  ) : <NotFound />; /* <Redirect to='/404/' /> */
+  ); /* <Redirect to='/404/' /> */
 };
 
 const mapStateToProps = state => {
@@ -32,9 +33,12 @@ const mapStateToProps = state => {
     playing: state.playing,
   };
 };
-
 const mapDispatchToProps = {
   getVideoSource,
 };
 
-export default { connect }(mapStateToProps, mapDispatchToProps)(Player);
+Player.propTypes = {
+  getVideoSource: PropTypes.func,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Player);

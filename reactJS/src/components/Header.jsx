@@ -4,22 +4,25 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import gravatar from '../utils/gravatar';
+import classNames from 'classnames';
 import { logoutRequest } from '../actions';
+import gravatar from '../utils/gravatar';
 import '../assets/styles/components/Header.scss';
 import logoPlatzi from '../assets/static/logo-platzi-video-BW2.png';
 import userIcon from '../assets/static/user-icon.png';
 
 const Header = (props) => {
-  const { user } = props;
+  const { user, isLogin, isRegister } = props;
   const hasUser = Object.keys(user).length > 0;
-
+  const headerClass = classNames('header', {
+    isLogin,
+    isRegister,
+  });
   const handleLogout = () => {
     props.logoutRequest({});
   };
-
   return (
-    <header className='header'>
+    <header className={headerClass}>
       <div className='header__logo'>
         <Link to='/'>
           <img
@@ -40,13 +43,13 @@ const Header = (props) => {
           {hasUser ?
             <li>
               <a className='header__menu--links' href='/login.html'>
-                Account
+                {user.name}
               </a>
             </li> : null}
           {hasUser ?
             <li><a href='#Logout' onClick={handleLogout}>Logout</a></li> :
             <li>
-              <Link to='/login' className='header__menu--links'>
+              <Link to='login' className='header__menu--links'>
                 Log In
               </Link>
             </li>}
@@ -55,20 +58,19 @@ const Header = (props) => {
     </header>
   );
 };
-
-Header.propTypes = {
-  user: PropTypes.object,
-  logoutRequest: PropTypes.func,
-};
-
 const mapStateToProps = state => {
   return {
     user: state.user,
   };
 };
-
 const mapDispatchToProps = {
   logoutRequest,
+};
+Header.propTypes = {
+  user: PropTypes.object,
+  isLogin: PropTypes.bool,
+  isRegister: PropTypes.bool,
+  logoutRequest: PropTypes.func,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
