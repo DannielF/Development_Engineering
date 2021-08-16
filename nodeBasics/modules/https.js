@@ -4,8 +4,8 @@ const port = 3000;
 
 function router(req, res) {
   switch (req.url) {
-    case '/':
-      res.end(<h1>Hello</h1>);
+    case '/hello':
+      res.end('<h1>Hello</h1>');
       break
     default:
       res.write('404, This URL do not exist');
