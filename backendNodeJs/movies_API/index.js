@@ -2,14 +2,9 @@ const express = require('express');
 const app = express();
 
 const { config } = require('./config/index');
+const moviesApi = require('./routes/movies.js');
 
-app.get('/', function (req, res) {
-  res.send('Hello world');
-});
-
-app.get('/json', function (req, res) {
-  res.json({ Hello: 'World' });
-});
+moviesApi(app);
 
 app.listen(config.port, function () {
   console.log(`Listening https://localhost:${config.port}`);
