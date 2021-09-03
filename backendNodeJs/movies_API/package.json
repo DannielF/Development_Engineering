@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "DEBUG=app:* node index index.js",
     "start": "NODE_ENV=production node index index.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "mocha --exit"
   },
   "keywords": [],
   "author": "Daniel <danielgranados1992@gmail.com>",
