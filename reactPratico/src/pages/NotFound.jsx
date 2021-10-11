@@ -3,7 +3,7 @@ import React from 'react'
 const NotFound = () => {
   return (
     <div>
-      <img href="https://unsplash.com/photos/By-tZImt0Ms" alt="Error 404" />
+      <img src="https://images.pexels.com/photos/159868/lost-cat-tree-sign-fun-159868.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Error 404" />
     </div>
   )
 }
