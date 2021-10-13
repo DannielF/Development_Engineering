@@ -20,6 +20,5 @@
 *mediaqueriesSAAS/
 *javascript/
 *.vscode
-*package-lock.json
 *node_modules
 backendNodeJs/movies_API/.env
