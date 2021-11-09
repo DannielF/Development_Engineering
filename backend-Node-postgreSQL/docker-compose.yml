@@ -1,4 +1,4 @@
-version: '3.3'
+version: "3.3"
 
 services:
   postgres:
@@ -8,6 +8,34 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: virtual_store
     ports:
-      - 5432:5432
+      - 5431:5431
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@mail.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - 5050:80
+
+  mysql:
+    image: mysql:5
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin123
+      - MYSQL_DATABASE=virtual_store
+      - MYSQL_PORT=3306
+    ports:
+      - 3306:3306
+    restart: always
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_HOST=mysql
+      - MYSQL_ROOT_PASSWORD=admin123
+    ports:
+      - 8080:80

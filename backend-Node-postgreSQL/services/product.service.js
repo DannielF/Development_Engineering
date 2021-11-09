@@ -1,9 +1,10 @@
 const faker = require('faker');
 const boom = require('@hapi/boom');
+const { models } = require('../libs/sequelize');
 
 class ProductsService {
 
-  constructor(){
+  constructor() {
     this.products = [];
     this.generate();
   }
@@ -30,8 +31,9 @@ class ProductsService {
     return newProduct;
   }
 
-  find() {
-    return this.products;
+  async find() {
+    const rta = await models.product.findAll();
+    return rta;
   }
 
   async findOne(id) {
