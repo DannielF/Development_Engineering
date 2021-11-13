@@ -4,9 +4,9 @@ services:
   postgres:
     image: postgres:13
     environment:
+      POSTGRES_DB: virtual_store
       POSTGRES_USER: dan
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: virtual_store
     ports:
       - 5431:5431
     volumes:
@@ -28,7 +28,6 @@ services:
       - MYSQL_PORT=3306
     ports:
       - 3306:3306
-    restart: always
     volumes:
       - ./mysql_data:/var/lib/mysql
 
