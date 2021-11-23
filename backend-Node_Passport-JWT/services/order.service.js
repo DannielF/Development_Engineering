@@ -4,7 +4,7 @@ const { models } = require('./../libs/sequelize');
 
 class OrderService {
 
-  constructor(){
+  constructor() {
   }
 
   async create(data) {
@@ -15,6 +15,23 @@ class OrderService {
   async addItem(data) {
     const newItem = await models.OrderProduct.create(data);
     return newItem;
+  }
+
+
+  async findByUser(userId) {
+    const orders = await models.Order.findAll({
+      where: {
+        '$customer.user.id$': userId
+      },
+      include: [
+        {
+          association: 'customer',
+          include: ['user']
+        },
+        'items'
+      ]
+    });
+    return orders;
   }
 
   async find() {
