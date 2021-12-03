@@ -1,5 +1,3 @@
-// local strategy passport
-
 const { Strategy, ExtractJwt } = require('passport-jwt');
 const { config } = require('../../../config/config');
 
