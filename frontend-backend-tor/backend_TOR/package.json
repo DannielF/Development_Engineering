@@ -1,0 +1,26 @@
+{
+  "name": "backend_TOR",
+  "version": "1.0.0",
+  "description": "Backend express, node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Daniel Granados",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "prettier": "^2.5.1"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}

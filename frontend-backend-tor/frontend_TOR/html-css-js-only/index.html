@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js" type="text/javascript"></script>
+    <title>Frontend TOR</title>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header>
+        <img
+          src="https://images.pexels.com/photos/625279/pexels-photo-625279.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+          alt="Logo header"
+        />
+        <div class="header-title-container">
+          <h1>Welcome to the amazing JobSearch .</h1>
+          <p>
+            Here you can find the best opportunities and grow your networking.
+          </p>
+          <a href="#findOne" class="header-button"
+            >Find Someone <span></span
+          ></a>
+        </div>
+      </header>
+      <main>
+        <section class="main-input-container">
+          <div class="backgroundImg"></div>
+          <div class="main-input-container--title">
+            <h2>Looking for someone</h2>
+            <form class="form">
+              <div>
+                <label for="username" class="username"></label>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="username"
+                  class="input-username"
+                />
+              </div>
+              <input
+                type="submit"
+                value="Search"
+                class="primary-button"
+                onclick="getData()"
+              />
+            </form>
+            <p>
+              We bring the best people to your team and the great opportunities.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="info" class="info"></div>
+  </body>
+</html>
