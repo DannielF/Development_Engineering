@@ -1,5 +1,4 @@
 const express = require('express');
-const axios = require('axios');
 const cors = require('cors');
 const routerApi = require('./routes');
 
@@ -11,7 +10,9 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-  res.send('Test get');
+  res.send('Welcome to Back-End -' +
+    ' Routes: /api/users/:Username'
+  );
 });
 
 
