@@ -1,6 +1,6 @@
 // get data from API with id
 // fetch data from API
-const API = "https://backend-user-tor.herokuapp.com/api/v1/users/";
+const API = "https://localhost:3000/api/v1/users/";
 const form = document.getElementsByTagName('form')[0];
 
 form.addEventListener('submit', async (e) => {
